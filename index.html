@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+	<title></title>
+	<style>
+		.active{
+			background: #000;
+			color: #fff;
+		}
+		.two{
+			display: none;
+			height: 80px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="title">
+		<div id="index" class="one">页面1
+			<div class="two">展示信息1</div>
+		</div>
+		<div id="zf" class="one">页面2
+		 	<div class="two">展示信息2</div>
+		</div>
+		<div id="gc" class="one">页面3
+		 	<div class="two">展示信息3</div>
+		</div>
+		<div id="hc" class="one">页面4
+		 	<div class="two">展示信息4</div>
+		</div>
+		<div id="shwt" class="one">页面5
+		 	<div class="two">展示信息5</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script>
+	
+	$(".one").on('click',function(){
+		$(".active").find(".two").hide();
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".active").find(".two").show();
+	})
+
+</script>
+</html>
