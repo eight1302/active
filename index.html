@@ -5,19 +5,24 @@
 	<title></title>
 	<style>
 		.active{
-			background: #000;
-			color: #fff;
+			    background: #ceb6b6;
+			    color: #fff;
+			    text-align: cente
 		}
 		.two{
-			display: none;
-			height: 80px;
-			background: red;
+			    height: 80px;
+			    background: #03A9F4;
+			    border: 1px solid #d2c6c6;
+			    border-top: none;
+			    text-align: left;
+			    padding-left: 20px;
+			    margin-top: 13px;
 		}
 	</style>
 </head>
 <body>
 	<div class="title">
-		<div id="index" class="one">页面1
+		<div id="index" class="one active">页面1
 			<div class="two">展示信息1</div>
 		</div>
 		<div id="zf" class="one">页面2
@@ -36,7 +41,7 @@
 </body>
 <script type="text/javascript" src="./jquery.min.js"></script>
 <script>
-	
+	$(".active").find(".two").show();
 	$(".one").on('click',function(){
 		$(".active").find(".two").hide();
 		$(this).addClass("active").siblings().removeClass("active");
